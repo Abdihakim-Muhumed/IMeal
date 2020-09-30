@@ -47,3 +47,8 @@ def update_profile(uname):
         return redirect(url_for('.profile',uname=user.username))
 
     return render_template('profile/update.html',form =form)
+
+@main.route('user/admin/<uname>', methods=['GET','POST'])
+@login_required
+def admin_dashboard():
+    return render_template('admin/dashboard.html')

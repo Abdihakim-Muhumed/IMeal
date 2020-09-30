@@ -91,7 +91,7 @@ class Menuday(db.Model):
 
 class Orders(db.Model):
     __tablename__="orders"
-
+h
     id = db.Column(db.Integer,primary_key = True)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     meal_id = db.Column(db.Integer,db.ForeignKey('meals.id'))
